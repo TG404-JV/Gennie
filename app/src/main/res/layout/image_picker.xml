@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/Profile_select_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Profile Image"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/picker_options"
+        android:layout_marginTop="10sp"
+        android:layout_below="@id/Profile_select_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+        <ImageView
+            android:id="@+id/picker_camera"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginEnd="50sp"
+            android:src="@drawable/ic_menu_camera"/>
+
+        <ImageView
+            android:id="@+id/picker_gallery"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@drawable/ic_menu_gallery"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_background"
+        android:layout_below="@+id/picker_options"
+        android:text="close"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"/>
+
+</RelativeLayout>

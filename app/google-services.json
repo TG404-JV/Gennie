@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "550280078650",
+    "project_id": "assist-ai-22b8d",
+    "storage_bucket": "assist-ai-22b8d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550280078650:android:eeda28920102014bfa9c03",
+        "android_client_info": {
+          "package_name": "com.android.assistyou"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB08wPfjFB-7lwKUdZ6ow96wNV9NqtRrDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

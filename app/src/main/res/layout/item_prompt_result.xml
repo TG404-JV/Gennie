@@ -1,0 +1,117 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:cardElevation="10sp"
+    app:cardCornerRadius="10sp"
+    android:layout_margin="10sp">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:paddingStart="10sp"
+           android:padding="10sp">
+
+           <com.google.android.material.imageview.ShapeableImageView
+               android:id="@+id/user_profile"
+               android:layout_width="30sp"
+               android:layout_height="30sp"
+               app:srcCompat="@drawable/ic_user"
+               android:background="@color/white"
+               app:shapeAppearanceOverlay="@style/ImageViewCircleShape"
+               />
+
+           <TextView
+               android:id="@+id/Question"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text=""
+               android:textSize="15sp"
+               android:fontFamily="@font/prompt_question"
+               android:textStyle="bold"
+               android:layout_marginStart="7sp" />
+       </LinearLayout>
+
+       <ScrollView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10sp"
+           android:layout_marginBottom="5sp">
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:textSize="15sp"
+               android:textStyle="bold"
+               android:layout_gravity="end"
+               android:paddingStart="10sp"
+               android:padding="10sp">
+
+
+               <com.google.android.material.imageview.ShapeableImageView
+                   android:id="@+id/app_logo"
+                   android:layout_width="30sp"
+                   android:layout_height="30sp"
+                   app:srcCompat="@drawable/genie_logo"
+                   android:background="@color/white"
+                   app:shapeAppearanceOverlay="@style/ImageViewCircleShape"/>
+
+               <TextView
+                   android:layout_gravity="center"
+                   android:id="@+id/result_text_view"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text=""
+                   android:textSize="16sp"
+                   android:textColor="@color/black"
+                   android:paddingStart="10sp"
+                   android:fontFamily="@font/prompt_answer"
+                   android:paddingEnd="5sp"/>
+
+           </LinearLayout>
+       </ScrollView>
+
+       <LinearLayout
+           android:id="@+id/main_icons"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginEnd="20sp"
+           android:layout_marginBottom="5sp"
+
+           android:gravity="end">
+
+           <ImageView
+               android:id="@+id/TextToSpeech"
+               android:layout_width="25sp"
+               android:layout_height="25sp"
+               android:contentDescription="todo"
+               android:layout_marginEnd="10sp"
+               android:src="@drawable/ic_text_speech" />
+
+           <ImageView
+               android:id="@+id/copy_btn"
+               android:layout_width="25sp"
+               android:layout_height="25sp"
+               android:contentDescription="todo"
+               android:layout_marginEnd="10sp"
+               android:src="@drawable/ic_copy_btn" />
+
+           <ImageView
+               android:id="@+id/share_btn"
+               android:layout_width="25sp"
+               android:layout_height="25sp"
+               android:contentDescription="todo"
+               android:src="@drawable/ic_share_btn" />
+       </LinearLayout>
+   </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

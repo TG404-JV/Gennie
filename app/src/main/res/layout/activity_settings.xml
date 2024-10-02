@@ -1,0 +1,189 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <!-- Profile Section -->
+    <LinearLayout
+        android:id="@+id/profileSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/SettingUserProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/genie_logo"
+            android:background="#A39C9C"
+            app:shapeAppearanceOverlay="@style/ImageViewCircleShape"/>
+
+    </LinearLayout>
+
+    <!-- Username and Email Fields -->
+    <LinearLayout
+        android:id="@+id/usernameEmailSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileSection"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_margin="10sp">
+
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingTop="12dp"
+            android:layout_marginTop="5sp"
+            android:paddingBottom="12dp"
+            android:background="@drawable/input_background"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_user"
+            android:paddingStart="16dp"/>
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="johndoe@example.com"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="@drawable/input_background"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_mail"
+            android:paddingStart="16dp"/>
+
+        <TextView
+            android:id="@+id/mobileNumberTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+1 234-567-890"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:background="@drawable/input_background"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/ic_phone"
+            android:paddingStart="16dp"/>
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:id="@+id/actionBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameEmailSection"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/SignIN"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_shapes"
+            android:text="SignIn"
+            android:textSize="20sp"
+            android:textColor="@color/btn_txt"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/SignUP"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_shapes"
+            android:text="SignUp"
+            android:textSize="20sp"
+            android:textColor="@color/btn_txt"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/LogOut"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_shapes"
+            android:text="LogOut"
+            android:textSize="20sp"
+            android:textColor="@color/btn_txt"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/ForgetPass"
+            android:layout_width="100sp"
+            android:layout_height="50sp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/btn_shapes"
+            android:text="Forget"
+            android:textSize="20sp"
+            android:textColor="@color/btn_txt"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <!-- Suggestions Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionBtn"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/suggestionHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Please Give Suggestions For Improvement"
+            android:textStyle="bold" />
+
+        <EditText
+            android:paddingStart="20sp"
+            android:id="@+id/userSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/input_background"
+            android:hint="Write a Suggestion"
+            android:layout_marginTop="16dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sendBtn"
+            android:layout_width="150sp"
+            android:layout_height="50sp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_shapes"
+            android:text="Send"
+            android:textSize="20sp"
+            android:textColor="@color/btn_txt"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</RelativeLayout>

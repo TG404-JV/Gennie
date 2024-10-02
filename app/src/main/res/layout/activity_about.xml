@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:padding="15sp"
+    android:layout_marginStart="10sp"
+    android:layout_marginEnd="10sp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".About">
+
+
+    <!-- Title -->
+    <ImageView
+        android:id="@+id/app_logo"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20sp"
+        android:alpha="0.2"
+        android:contentDescription="@string/content_discription"
+        android:src="@drawable/sahay_nobg" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="about app"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_app"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="5dp"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/aboutme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="about developer"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_below="@id/descriptionTextView"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Description -->
+    <TextView
+        android:id="@+id/descriptionTejas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_dev"
+        android:layout_below="@id/aboutme"
+        android:layout_marginTop="5dp"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:elegantTextHeight="true"
+       />
+
+
+    <TextView
+
+        android:id="@+id/Youtube"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://www.youtube.com/@TGAdvice"
+        android:layout_below="@id/descriptionTejas"
+        android:layout_marginTop="20dp"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:drawableStart="@drawable/ic_youtube"
+        android:drawablePadding="8dp"
+        android:autoLink="web"/>
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cse.tejas@gmail.com"
+        android:layout_below="@id/Youtube"
+        android:layout_marginTop="5dp"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:elegantTextHeight="true"
+        android:drawableStart="@drawable/ic_mail"
+        android:drawablePadding="8dp"
+        android:autoLink="email" /> <!-- This attribute makes URLs clickable -->
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="8788466016"
+        android:layout_below="@id/email"
+        android:layout_marginTop="5dp"
+        android:paddingStart="10sp"
+        android:paddingEnd="10sp"
+        android:elegantTextHeight="true"
+        android:drawableStart="@drawable/ic_phone"
+        android:drawablePadding="8dp"
+        android:autoLink="phone" />
+
+</RelativeLayout>

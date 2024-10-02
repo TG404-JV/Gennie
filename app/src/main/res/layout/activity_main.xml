@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true">
+
+
+    <!-- Toolbar -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:title="@string/app_name" />
+
+            <TextView
+                android:id="@+id/timeZone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"
+                android:fontFamily="@font/prompt_answer"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:textSize="40sp"
+                />
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <!-- RecyclerView -->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10sp"
+            android:id="@+id/PromptResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="72dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+       <RelativeLayout
+           android:id="@+id/imagePromptInput"
+           android:layout_width="50sp"
+           android:layout_height="50sp"
+           android:layout_marginStart="20sp"
+           android:layout_above="@id/input_Card"
+           android:visibility="gone">
+
+           <ImageView
+               android:id="@+id/inputPromptImage"
+               android:layout_width="40sp"
+               android:layout_height="40sp"/>
+
+           <ImageView
+               android:id="@+id/cut"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_remove"
+               android:layout_alignParentEnd="true"/>
+
+       </RelativeLayout>
+
+
+       <RelativeLayout
+           android:layout_toEndOf="@id/imagePromptInput"
+           android:id="@+id/imagePromptInput2"
+           android:layout_width="50sp"
+           android:layout_height="50sp"
+           android:layout_marginStart="20sp"
+           android:layout_above="@id/input_Card"
+           android:visibility="gone">
+
+           <ImageView
+               android:id="@+id/inputPromptImage2"
+               android:layout_width="40sp"
+               android:layout_height="40sp"/>
+
+           <ImageView
+               android:id="@+id/cut2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/ic_remove"
+               android:layout_alignParentEnd="true"/>
+
+       </RelativeLayout>
+
+       <androidx.cardview.widget.CardView
+           android:id="@+id/input_Card"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:minHeight="50sp"
+           android:layout_margin="16dp"
+           app:cardElevation="8dp"
+           app:cardCornerRadius="20dp"
+           android:layout_alignParentBottom="true"
+           app:cardBackgroundColor="#FFFFFF">
+           <RelativeLayout
+               android:id="@+id/inputs"
+               android:layout_width="wrap_content"
+               android:layout_height="50sp"
+               android:layout_alignParentBottom="true"
+               android:layout_gravity="center"
+               android:fitsSystemWindows="true">
+
+               <!-- Write something EditText -->
+               <androidx.appcompat.widget.AppCompatEditText
+                   android:layout_marginStart="10sp"
+                   android:id="@+id/prompt"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:backgroundTint="@color/white"
+                   android:focusableInTouchMode="true"
+                   android:maxWidth="200sp"
+                   android:hint="Write Something..."
+                   android:forceHasOverlappingRendering="false"/>
+
+               <View
+                   android:layout_alignLeft="@id/promptBtn"
+                   android:layout_width="0.5sp"
+                   android:layout_height="match_parent"
+                   android:background="@color/divider"/>
+
+
+               <LinearLayout
+                   android:id="@+id/promptBtn"
+                   android:layout_width="wrap_content"
+                   android:layout_alignParentEnd="true"
+                   android:gravity="center_vertical"
+                   android:layout_centerVertical="true"
+                   android:layout_marginEnd="10sp"
+
+                   android:layout_height="wrap_content">
+
+
+
+
+                   <ImageView
+                       android:id="@+id/micBtn"
+                       android:layout_width="30sp"
+                       android:layout_height="30sp"
+                       android:layout_marginEnd="10sp"
+                       android:src="@drawable/prompt_mic" />
+
+                   <ImageView
+                       android:id="@+id/inputImage"
+                       android:layout_width="30sp"
+                       android:layout_height="30sp"
+                       android:src="@drawable/prompt_image" />
+
+
+                   <RelativeLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+                       <!-- Send Prompt Button -->
+                       <ImageView
+                           android:id="@+id/sendPrompt"
+                           android:layout_width="30sp"
+                           android:layout_height="30sp"
+                           android:layout_marginStart="10sp"
+                           android:src="@drawable/send_prompt"
+                           android:visibility="gone" />
+                       <!-- Progress Bar -->
+                       <ProgressBar
+                           android:id="@+id/progressBar"
+                           android:layout_width="30sp"
+                           android:layout_height="30sp"
+                           android:layout_marginStart="10sp"
+                           android:visibility="gone"/>
+
+                   </RelativeLayout>
+               </LinearLayout>
+
+           </RelativeLayout>
+
+       </androidx.cardview.widget.CardView>
+
+       <!-- Inputs Layout -->
+
+</RelativeLayout>

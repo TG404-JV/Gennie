@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Sahay</string>
+    <string name="title_activity_assistant_screen">AssistantScreen</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="login_name_hint">Name</string>
+    <string name="login_mobile_number_hint">Mobile Number</string>
+    <string name="internet_permission_denied">HEy\n</string>
+    <string name="about_dev">Tejas Kale is currently pursuing a Bachelor\'s degree in Computer Science and Engineering (CSE) and is in the 3rd year of his studies. With a passion for technology, Tejas has acquired knowledge and skills in various domains, including web development, Android app development, operating system optimizations, UI/UX design, and much more. He is dedicated to learning and exploring new technologies to stay at the forefront of the rapidly evolving tech industry.</string>
+    <string name="about_app">Sahay is your personalized AI assistant designed to make your life easier. Powered by advanced machine learning algorithms, Assistest You can help you with a wide range of tasks, from setting reminders to answering questions and providing recommendations. Our mission is to provide seamless assistance to our users, empowering them to accomplish more in less time. With Gemini, you have a reliable companion that\'s always ready to help.</string>
+    <string name="dev_name">Tejas Kale</string>
+    <string name="content_discription">TODO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_genie_screen">GenieScreen</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="privacy">Assist Privacy Policy</string>
+    <string name="dateOfPolicy">Effective Date: 6 May 2024</string>
+    <string name="discription">This Privacy Policy describes how Assist (we, us, or our) collects, uses, and discloses your information when you use our mobile application (the Assist You).</string>
+    <string name="collectin">Information We Collect</string>
+    <string name="collection_detail_l1">We may collect the following information when you use the App:</string>
+    <string name="collection_detail_l2">User queries and instructions</string>
+    <string name="dash">-</string>
+    <string name="collection_detail_l3">Optional user-provided information (if any)</string>
+    <string name="information">How We Use Your Information</string>
+    <string name="information_l1">We may use the information we collect for the following purposes:</string>
+    <string name="information_l2">To provide and maintain the App</string>
+    <string name="information_l3">To improve and personalize the App experience</string>
+    <string name="information_sharing">Information Sharing</string>
+    <string name="information_sharing_l1">We may share your information in the following circumstances:</string>
+    <string name="information_sharing_l2">With third-party service providers for app functionality and services</string>
+    <string name="information_sharing_l3">For legal compliance, enforcement, and protection purposes</string>
+    <string name="user_rights">Your Privacy Rights</string>
+    <string name="user_rights_l1">You have the following privacy rights:</string>
+    <string name="user_rights_l2">Right to access and update your personal information</string>
+    <string name="user_rights_l3">Right to request deletion of your personal information</string>
+    <string name="dev_team">Powered BY TG Team</string>
+</resources>
