@@ -6,6 +6,8 @@ import android.widget.TextView;
 
 public class AnimatedTextView extends androidx.appcompat.widget.AppCompatTextView {
 
+
+    // Hi
     private String textToAnimate;
     private int delay = 50; // Adjust delay between character reveals (milliseconds)
 
