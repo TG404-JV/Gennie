@@ -1,8 +1,11 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.androidApplication)
     id("com.google.gms.google-services")
       id("com.google.firebase.crashlytics")
 }
+
 
 android {
     namespace = "com.android.assistyou"
@@ -15,7 +18,16 @@ android {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+
+
+
+        // Retrieve API key from local.properties
     }
+
+
+
+
 
 
 
@@ -28,6 +40,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
+
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -35,7 +48,9 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig=true
     }
+
 }
 
 dependencies {

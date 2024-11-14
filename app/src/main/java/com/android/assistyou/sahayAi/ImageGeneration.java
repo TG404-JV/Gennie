@@ -1,5 +1,11 @@
+package com.android.assistyou.sahayAi;
+
 // AssisGemini.java
-package com.android.assistyou;
+
+
+
+import static com.android.assistyou.sahayAi.SecureFile.SecureKey.LLMKEY;
+import static com.android.assistyou.sahayAi.SecureFile.SecureKey.SAHAY;
 
 import android.graphics.Bitmap;
 import android.graphics.Picture;
@@ -15,17 +21,16 @@ import com.google.common.util.concurrent.ListenableFuture;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class ImageGen {
+public class ImageGeneration {
 
-    static final String apiKey = "AIzaSyCG34Q8Y7USJbk3BVYluNy217GqeU67MSw";
     String generatedText;
 
-    public void generatedText(String prompt,Bitmap image, final OnTextGeneratedListener listener) {
+    public void generatedText(String prompt,Bitmap image, final com.android.assistyou.sahayAi.ImageGeneration.OnTextGeneratedListener listener) {
         // Initialize executor
         Executor executor = Executors.newSingleThreadExecutor();
 
         // For text-only input, use the gemini-pro model
-        GenerativeModel gm = new GenerativeModel("gemini-pro-vision", apiKey);
+        GenerativeModel gm = new GenerativeModel(SAHAY, LLMKEY);
         GenerativeModelFutures model = GenerativeModelFutures.from(gm);
 
 
@@ -52,12 +57,12 @@ public class ImageGen {
         }, executor);
     }
 
-    public void generatedText(String prompt,Bitmap image1,Bitmap image2, final OnTextGeneratedListener listener) {
+    public void generatedText(String prompt,Bitmap image1,Bitmap image2, final com.android.assistyou.sahayAi.ImageGeneration.OnTextGeneratedListener listener) {
         // Initialize executor
         Executor executor = Executors.newSingleThreadExecutor();
 
         // For text-only input, use the gemini-pro model
-        GenerativeModel gm = new GenerativeModel("gemini-pro-vision", apiKey);
+        GenerativeModel gm = new GenerativeModel(SAHAY, LLMKEY);
         GenerativeModelFutures model = GenerativeModelFutures.from(gm);
 
 
@@ -92,3 +97,4 @@ public class ImageGen {
     }
 
 }
+

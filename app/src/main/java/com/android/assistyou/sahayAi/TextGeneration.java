@@ -1,8 +1,15 @@
+package com.android.assistyou.sahayAi;
+
 // AssisGemini.java
-package com.android.assistyou;
+
+
+
+import static com.android.assistyou.sahayAi.SecureFile.SecureKey.LLMKEY;
+import static com.android.assistyou.sahayAi.SecureFile.SecureKey.SAHAY;
 
 import androidx.annotation.NonNull;
 
+import com.android.assistyou.sahayAi.pyDataFetcher.LLMDataFetcher;
 import com.google.ai.client.generativeai.BuildConfig;
 import com.google.ai.client.generativeai.GenerativeModel;
 import com.google.ai.client.generativeai.java.GenerativeModelFutures;
@@ -11,26 +18,25 @@ import com.google.ai.client.generativeai.type.GenerateContentResponse;
 import com.google.common.util.concurrent.FutureCallback;
 import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
-
 import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class AssisGemini {
+public class TextGeneration {
 
-  private static final String apiKey = "AIzaSyCG34Q8Y7USJbk3BVYluNy217GqeU67MSw";
 
-    // Access your API key as a Build Configuration variable
     String generatedText;
-
-    public void generatedText(String prompt, final OnTextGeneratedListener listener) {
+    LLMDataFetcher llmDataFetcher=new LLMDataFetcher();
+    public void generatedText(String prompt, final com.android.assistyou.sahayAi.TextGeneration.OnTextGeneratedListener listener) {
         // Initialize executor
         Executor executor = Executors.newSingleThreadExecutor();
 
+
+
         // For text-only input, use the gemini-pro model
-        GenerativeModel gm = new GenerativeModel("gemini-pro", apiKey);
+        GenerativeModel gm = new GenerativeModel(SAHAY,LLMKEY );
         GenerativeModelFutures model = GenerativeModelFutures.from(gm);
 
         Content content = new Content.Builder()

@@ -1,5 +1,12 @@
-package com.android.assistyou;
+package com.android.assistyou.sahayAi;
 
+
+
+
+import static com.android.assistyou.sahayAi.SecureFile.SecureKey.LLMKEY;
+import static com.android.assistyou.sahayAi.SecureFile.SecureKey.SAHAY;
+
+import com.android.assistyou.PromptResultAdapter;
 import com.google.ai.client.generativeai.GenerativeModel;
 import com.google.ai.client.generativeai.java.GenerativeModelFutures;
 import com.google.ai.client.generativeai.type.Content;
@@ -9,28 +16,28 @@ import org.reactivestreams.Publisher;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
 
-public class ChatApplication {
+public class ChatGen {
 
     // For text-only input, use the gemini-pro model
 
     Boolean isCompleted = false;
-    GenerativeModel gm = new GenerativeModel("gemini-pro", "AIzaSyCG34Q8Y7USJbk3BVYluNy217GqeU67MSw");
+    GenerativeModel gm = new GenerativeModel(SAHAY, LLMKEY);
     GenerativeModelFutures model = GenerativeModelFutures.from(gm);
 
     String result;
 
-    private OnTextGeneratedListener listener;
+    private com.android.assistyou.sahayAi.ChatGen.OnTextGeneratedListener listener;
     private PromptResultAdapter promptResultAdapter; // Instance of PromptResultAdapter
 
-    public ChatApplication() {
+    public ChatGen() {
 
     }
 
-    public ChatApplication(PromptResultAdapter adapter) {
+    public ChatGen(PromptResultAdapter adapter) {
         this.promptResultAdapter = adapter;
     }
 
-    public void generateText(String prompt, final OnTextGeneratedListener listener) {
+    public void generateText(String prompt, final com.android.assistyou.sahayAi.ChatGen.OnTextGeneratedListener listener) {
         this.listener = listener;
 
         // Create input content

@@ -1,5 +1,8 @@
 package com.android.assistyou;
 
+
+import static com.android.assistyou.sahayAi.SecureFile.SecureKey.QueryResolver;
+
 import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -41,8 +44,13 @@ import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.assistyou.sahayAi.ChatGen;
+import com.android.assistyou.sahayAi.ImageGeneration;
+import com.android.assistyou.sahayAi.TextGeneration;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -311,9 +319,9 @@ public class MainActivity extends AppCompatActivity {
                 } else {
 
 
-                    ChatApplication ch = new ChatApplication();
-                    AssisGemini assisGemini = new AssisGemini();
-                    assisGemini.generatedText(user_prompt, generatedText -> runOnUiThread(() -> {
+                    ChatGen ch = new ChatGen();
+                    TextGeneration TextGeneration = new TextGeneration();
+                    TextGeneration.generatedText(user_prompt+QueryResolver, generatedText -> runOnUiThread(() -> {
                         timzone.setVisibility(View.GONE);
                         progressBar.setVisibility(View.GONE);
                         resultList.add(new PromptResultItem(generatedText, user_prompt + " :"));
@@ -328,7 +336,7 @@ public class MainActivity extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
                 send_Prompt.setVisibility(View.GONE);
                 user_prompt = Objects.requireNonNull(prompt.getText()).toString();
-                ImageGen ImageGenerator = new ImageGen();
+                ImageGeneration ImageGenerator = new ImageGeneration();
 
                 if (promptImage2 != null) {
                     ImageGenerator.generatedText(user_prompt, PromptImageBitmap, promptImage2, generatedText -> runOnUiThread(() -> {
@@ -384,23 +392,18 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.profile_user) {
 
 // Now you can use preferences to read or write data
-            Intent loginActivity = new Intent(MainActivity.this, com.android.assistyou.Settings.class);
-            startActivity(loginActivity);
+            startActivity(new Intent(MainActivity.this,com.android.assistyou.Settings.class));
             return true;
         } else if (item.getItemId() == R.id.login) {
-            Intent settings = new Intent(MainActivity.this, Login.class);
-            startActivity(settings);
+            startActivity(new Intent(MainActivity.this,Login.class));
 
         } else if (item.getItemId() == R.id.policy) {
-            Intent policy = new Intent(MainActivity.this, Policy.class);
-            startActivity(policy);
+            startActivity(new Intent(MainActivity.this,Policy.class));
 
         } else if (item.getItemId() == R.id.about) {
-            Intent about = new Intent(MainActivity.this, About.class);
-            startActivity(about);
+            startActivity(new Intent(MainActivity.this,About.class));
         } else if (item.getItemId() == R.id.history) {
-            Intent history = new Intent(this, histroy.class);
-            startActivity(history);
+            startActivity(new Intent(MainActivity.this,histroy.class));
 
         } else {
             // To do

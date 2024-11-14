@@ -16,7 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.github.dhaval2404.imagepicker.ImagePicker;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.imageview.ShapeableImageView;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,11 +29,13 @@ import com.google.firebase.storage.StorageReference;
 
 public class Settings extends AppCompatActivity {
 
-    private EditText suggestionEditText;
-    private Button loginButton;
-    private Button createAccountButton;
-    private Button logoutButton;
-    private Button forgetPasswordButton;
+    private TextInputEditText suggestionEditText;
+    private MaterialButton loginButton;
+    private MaterialButton createAccountButton;
+    private MaterialButton logoutButton;
+
+    private MaterialButton ChangeImg;
+    private MaterialButton forgetPasswordButton;
     private ShapeableImageView profile;
     private StorageReference storageRef;
     private Uri profileURI;
@@ -49,14 +53,16 @@ public class Settings extends AppCompatActivity {
 
         // Initialize views
         suggestionEditText = findViewById(R.id.userSuggestion);
-        Button sendButton = findViewById(R.id.sendBtn);
+        MaterialButton sendButton = findViewById(R.id.sendBtn);
         loginButton = findViewById(R.id.SignIN);
         createAccountButton = findViewById(R.id.SignUP);
         logoutButton = findViewById(R.id.LogOut);
         profile = findViewById(R.id.SettingUserProfile);
         forgetPasswordButton = findViewById(R.id.ForgetPass);
 
-        profile.setOnClickListener(v -> pickImage());
+        ChangeImg=findViewById(R.id.changePhotoButton);
+
+        ChangeImg.setOnClickListener(v -> pickImage());
 
         // Load profile image if available
         loadProfileImageFromFirebase();
@@ -133,9 +139,9 @@ public class Settings extends AppCompatActivity {
                         String email = dataSnapshot.child("email").getValue(String.class);
                         String mobNumber = dataSnapshot.child("mobNumber").getValue(String.class);
 
-                        TextView usernameTextView = findViewById(R.id.usernameTextView);
-                        TextView emailTextView = findViewById(R.id.emailTextView);
-                        TextView mobileNumberTextView = findViewById(R.id.mobileNumberTextView);
+                        TextInputEditText usernameTextView = findViewById(R.id.usernameTextView);
+                        TextInputEditText emailTextView = findViewById(R.id.emailTextView);
+                        TextInputEditText mobileNumberTextView = findViewById(R.id.mobileNumberTextView);
 
                         usernameTextView.setText(username);
                         emailTextView.setText(email);

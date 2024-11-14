@@ -18,12 +18,22 @@ public class PromptResultItem {
         this.question = question;
     }
 
+    public PromptResultItem(Object generatedText, String question) {
+        this.result = result;
+        this.question = question;
+    }
+
     public String getResult() {
         // Remove asterisks from the result string
         if (result.contains("*") || result.contains("**") || result.contains("***")) {
             result = result.replace("*", "");
             result = result.replace("**", "");
             result = result.replace("***", "");
+            result = result.replace("#", "");
+            result = result.replace("##", "");
+            result = result.replace("###", "");
+
+
         }
         return result;
     }

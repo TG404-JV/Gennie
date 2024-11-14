@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.assistyou.sahayAi.ChatGen;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +21,7 @@ public class RecylerRes extends AppCompatActivity {
     private PromptResultAdapter adapter;
     private List<PromptResultItem> resultList;
 
-    private ChatApplication chatApplication;
+    private ChatGen chatApplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

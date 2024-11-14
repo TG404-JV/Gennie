@@ -27,6 +27,12 @@
 
     <color name="btn_txt">#381E72</color>
 
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#424242</color>
+    <color name="light_gray">#E0E0E0</color>
+    <color name="divider_color">#F5F5F5</color>
+    <color name="icon_color">#757575</color>
+
     <!-- Here you can add color of your choice  -->
 
 </resources>

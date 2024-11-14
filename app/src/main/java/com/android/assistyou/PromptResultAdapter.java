@@ -18,6 +18,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.material.button.MaterialButton;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -99,8 +100,8 @@ public class PromptResultAdapter extends RecyclerView.Adapter<PromptResultAdapte
     public class PromptResultViewHolder extends RecyclerView.ViewHolder {
         private TextView resultTextView;
         private TextView promptQuestion;
-        private ImageView copyBtn;
-        private ImageView shareBtn, Speech;
+        private MaterialButton copyBtn;
+        private MaterialButton shareBtn, Speech;
         private ShapeableImageView UserProfile;
         private boolean isSpeaking;
 
