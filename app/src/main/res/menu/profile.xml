@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/profile_user"
-        android:icon="@drawable/sahay_nobg"
+        android:icon="@drawable/ic_sahay_round"
         android:title="Profile"
         app:showAsAction="ifRoom"/>
 

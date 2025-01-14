@@ -1,7 +1,8 @@
 package com.android.assistyou;
 
 
-import static com.android.assistyou.sahayAi.SecureFile.SecureKey.QueryResolver;
+
+
 
 import android.Manifest;
 import android.content.Context;
@@ -321,7 +322,7 @@ public class MainActivity extends AppCompatActivity {
 
                     ChatGen ch = new ChatGen();
                     TextGeneration TextGeneration = new TextGeneration();
-                    TextGeneration.generatedText(user_prompt+QueryResolver, generatedText -> runOnUiThread(() -> {
+                    TextGeneration.generatedText(user_prompt, generatedText -> runOnUiThread(() -> {
                         timzone.setVisibility(View.GONE);
                         progressBar.setVisibility(View.GONE);
                         resultList.add(new PromptResultItem(generatedText, user_prompt + " :"));
@@ -403,7 +404,8 @@ public class MainActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.about) {
             startActivity(new Intent(MainActivity.this,About.class));
         } else if (item.getItemId() == R.id.history) {
-            startActivity(new Intent(MainActivity.this,histroy.class));
+            Intent history=new Intent(MainActivity.this,histroy.class);
+            startActivity(history);
 
         } else {
             // To do

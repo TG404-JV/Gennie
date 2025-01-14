@@ -68,10 +68,10 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     // add the dependency for the Google AI client SDK for Android
-    implementation("com.google.ai.client.generativeai:generativeai:0.3.0")
+    implementation("com.google.ai.client.generativeai:generativeai:0.9.0")
 
     // Required for one-shot operations (to use `ListenableFuture` from Guava Android)
-    implementation("com.google.guava:guava:31.0.1-android")
+    implementation("com.google.guava:guava:32.1.3-android")
 
     // Required for streaming operations (to use `Publisher` from Reactive Streams)
     implementation("org.reactivestreams:reactive-streams:1.0.4")
@@ -82,7 +82,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth")
     implementation("com.google.firebase:firebase-storage")
     implementation ("com.github.bumptech.glide:glide:4.12.0")
-    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
     implementation ("com.github.dhaval2404:imagepicker:2.1")
 
 

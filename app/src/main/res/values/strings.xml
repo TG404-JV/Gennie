@@ -20,13 +20,13 @@
     <string name="login_name_hint">Name</string>
     <string name="login_mobile_number_hint">Mobile Number</string>
     <string name="internet_permission_denied">HEy\n</string>
-    <string name="about_dev">Yash Jadhav is currently pursuing a Bachelor\'s degree in Artificial Intelligence and Data Science (AI/DS) and is in the 4th year of his studies. With a passion for technology, Yash has acquired knowledge and skills in various domains, including web development, Android app development, operating system optimizations, UI/UX design, and much more. He is dedicated to learning and exploring new technologies to stay at the forefront of the rapidly evolving tech industry.</string>
+    <string name="about_dev">Vijay Kakde is currently pursuing a Bachelor\'s degree in Computer Science And Engineering (CSE) and is in the 4th year of his studies. With a passion for technology, Pavan has acquired knowledge and skills in various domains, including web development, Android app development, operating system optimizations, UI/UX design, and much more. He is dedicated to learning and exploring new technologies to stay at the forefront of the rapidly evolving tech industry.</string>
     <string name="about_app">Sahay is your personalized AI assistant designed to make your life easier. Powered by advanced machine learning algorithms, Assisted You can help you with a wide range of tasks, from setting reminders to answering questions and providing recommendations. Our mission is to provide seamless assistance to our users, empowering them to accomplish more in less time. With Sahay, you have a reliable companion that\'s always ready to help.</string>
-    <string name="dev_name">Yash Jadhav</string>
+    <string name="dev_name">Pavan More</string>
     <string name="content_discription">TODO</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_genie_screen">GenieScreen</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>F
+    <string name="title_activity_genie_screen">GenieScreen</string>F
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
